@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<robot name="robotarm_capstone" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find robotarm_capstone_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find robotarm_capstone_description)/urdf/robotarm_capstone.trans" />
+<xacro:include filename="$(find robotarm_capstone_description)/urdf/robotarm_capstone.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="4.020849375084743e-17 0.0 0.005000000000000001" rpy="0 0 0"/>
+    <mass value="3.551256335617901"/>
+    <inertia ixx="0.012814" iyy="0.012814" izz="0.025569" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="2.0030450291854913e-17 2.0030450291854907e-17 0.04290880959465924" rpy="0 0 0"/>
+    <mass value="7.128679889758317"/>
+    <inertia ixx="0.014169" iyy="0.028332" izz="0.02758" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.01" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="0.03360000772838613 -8.485027970501936e-11 0.06805286707917997" rpy="0 0 0"/>
+    <mass value="6.954595389355063"/>
+    <inertia ixx="0.045406" iyy="0.045852" izz="0.00637" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0336 -0.0 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0336 -0.0 -0.075" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="0.030000023541393757 4.114813245135107e-18 0.02802505675959771" rpy="0 0 0"/>
+    <mass value="3.999606826289236"/>
+    <inertia ixx="0.014123" iyy="0.013491" izz="0.002566" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03 -0.0 -0.278557" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03 -0.0 -0.278557" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hand_link_1">
+  <inertial>
+    <origin xyz="-0.0017307714096714746 0.0029387009017803663 0.018364409381455116" rpy="0 0 0"/>
+    <mass value="0.28375707869235817"/>
+    <inertia ixx="0.000178" iyy="0.000228" izz="9.1e-05" ixy="-8e-06" iyz="-2.1e-05" ixz="-4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.008 -0.0 -0.452457" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/hand_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.008 -0.0 -0.452457" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/hand_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_gripper_link1_1">
+  <inertial>
+    <origin xyz="-6.42194630806614e-14 -0.002499999999999998 0.014999999999971148" rpy="0 0 0"/>
+    <mass value="0.01720971564055042"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.03 -0.005 -0.499957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/right_gripper_link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.03 -0.005 -0.499957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/right_gripper_link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_gripper_link2_1">
+  <inertial>
+    <origin xyz="-6.4248953379753e-14 -0.002499999999999998 0.014999999999971148" rpy="0 0 0"/>
+    <mass value="0.017209715640550204"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="0.0" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01 -0.005 -0.509957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/right_gripper_link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01 -0.005 -0.509957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/right_gripper_link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_gripper_link2_1">
+  <inertial>
+    <origin xyz="-6.424548393280105e-14 -0.002499999999999998 0.014999999999971037" rpy="0 0 0"/>
+    <mass value="0.0172097156405502"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.01 -0.005 -0.509957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/left_gripper_link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.01 -0.005 -0.509957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/left_gripper_link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_gripper_link1_1">
+  <inertial>
+    <origin xyz="-6.42715047849407e-14 -0.002499999999999998 0.014999999999970925" rpy="0 0 0"/>
+    <mass value="0.01720971564055051"/>
+    <inertia ixx="3e-06" iyy="3e-06" izz="0.0" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03 -0.005 -0.499957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/left_gripper_link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03 -0.005 -0.499957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/left_gripper_link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_finger_1">
+  <inertial>
+    <origin xyz="-0.0038609530597631878 -0.002499999999999998 0.010996703413204356" rpy="0 0 0"/>
+    <mass value="0.03447696599229279"/>
+    <inertia ixx="1.2e-05" iyy="1.5e-05" izz="3e-06" ixy="-0.0" iyz="0.0" ixz="-4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.01 -0.0 -0.539957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/right_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.01 -0.0 -0.539957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/right_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_finger_1">
+  <inertial>
+    <origin xyz="-0.01613904694030094 -0.002499999999999998 0.020996703413204365" rpy="0 0 0"/>
+    <mass value="0.034476965992292836"/>
+    <inertia ixx="1.2e-05" iyy="1.5e-05" izz="3e-06" ixy="0.0" iyz="0.0" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.03 -0.0 -0.529957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/left_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.03 -0.0 -0.529957" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find robotarm_capstone_description)/meshes/left_finger_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="base_link_to_link1" type="revolute">
+  <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="link1_to_link2" type="revolute">
+  <origin xyz="-0.0336 0.0 0.065" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="link2_to_link3" type="revolute">
+  <origin xyz="0.0036 0.0 0.203557" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="link3_to_hand_link" type="revolute">
+  <origin xyz="0.022 0.0 0.1739" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="hand_link_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="hand_link_to_left_gripper_link2" type="revolute">
+  <origin xyz="0.018 0.005 0.0575" rpy="0 0 0"/>
+  <parent link="hand_link_1"/>
+  <child link="left_gripper_link2_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="1.22173" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="hand_link_to_left_gripper_link1" type="revolute">
+  <origin xyz="0.038 0.005 0.0475" rpy="0 0 0"/>
+  <parent link="hand_link_1"/>
+  <child link="left_gripper_link1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <mimic joint="hand_link_to_left_gripper_link2" multiplier="1.0" offset="0.0"/>
+  <limit upper="1.22173" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_gripper_link1_to_left_finger" type="revolute">
+  <origin xyz="0.0 -0.005 0.03" rpy="0 0 0"/>
+  <parent link="left_gripper_link1_1"/>
+  <child link="left_finger_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <mimic joint="hand_link_to_left_gripper_link2" multiplier="-1.0" offset="0.0"/>
+  <limit upper="0.0" lower="-1.22173" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_gripper_link2_to_left_finger" type="revolute">
+  <origin xyz="0.02 -0.005 0.02" rpy="0 0 0"/>
+  <parent link="left_gripper_link2_1"/>
+  <child link="left_finger_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <mimic joint="hand_link_to_left_gripper_link2" multiplier="-1.0" offset="0.0"/>
+  <limit upper="0.0" lower="-1.22173" effort="100" velocity="100"/>
+</joint>
+
+<joint name="hand_link_to_right_gripper_link1" type="revolute">
+  <origin xyz="-0.022 0.005 0.0475" rpy="0 0 0"/>
+  <parent link="hand_link_1"/>
+  <child link="right_gripper_link1_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <limit upper="0.0" lower="-1.22173" effort="100" velocity="100"/>
+</joint>
+
+<joint name="hand_link_to_right_gripper_link2" type="revolute">
+  <origin xyz="-0.002 0.005 0.0575" rpy="0 0 0"/>
+  <parent link="hand_link_1"/>
+  <child link="right_gripper_link2_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+  <mimic joint="hand_link_to_right_gripper_link1" multiplier="-1.0" offset="0.0"/>
+  <limit upper="0.0" lower="-1.22173" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_gripper_link1_to_right_finger" type="revolute">
+  <origin xyz="0.02 -0.005 0.04" rpy="0 0 0"/>
+  <parent link="right_gripper_link1_1"/>
+  <child link="right_finger_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <mimic joint="hand_link_to_right_gripper_link1" multiplier="1.0" offset="0.0"/>
+  <limit upper="1.22173" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_gripper_link2_to_right_finger" type="revolute">
+  <origin xyz="0.0 -0.005 0.03" rpy="0 0 0"/>
+  <parent link="right_gripper_link2_1"/>
+  <child link="right_finger_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+  <mimic joint="hand_link_to_right_gripper_link1" multiplier="1.0" offset="0.0"/>
+  <limit upper="1.22173" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>

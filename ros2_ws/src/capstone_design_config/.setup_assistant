@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: capstone_design_description
+    relative_path: urdf/capstone_design.xacro
+  srdf:
+    relative_path: config/capstone_design.srdf
+  package_settings:
+    author_name: leejinwoo
+    author_email: dlwlsdn9292@naver.com
+    generated_timestamp: 1748770911
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
